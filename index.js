@@ -71,7 +71,7 @@ versionCheck().then(async (data) => {
         .registerCommandsIn(path.join(__dirname, "commands"));
     });
 
-    client.login(token).catch(async (err) => {
+    client.login(process.env.TOKEN).catch(async (err) => {
       console.error(
         "Invalid token was provided | Please check your .env file and enter a valid token"
       );
